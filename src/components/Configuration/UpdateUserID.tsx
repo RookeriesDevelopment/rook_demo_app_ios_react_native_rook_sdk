@@ -9,7 +9,7 @@ export const UpdateUserIDConfig = () => {
 
   const { Fonts, Gutters, Common } = useTheme();
 
-  const { ready, updateUserID, clearUserID, getUserID } =
+  const { ready, updateUserID, clearUserID, getUserID, syncUserTimezone } =
     useRookConfiguration();
 
   useEffect(() => {
@@ -35,6 +35,16 @@ export const UpdateUserIDConfig = () => {
       setCurrentUserID('');
 
       Alert.alert('User cleared', '', [{ text: 'OK' }]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleTimezone = async (): Promise<void> => {
+    try {
+      await syncUserTimezone();
+
+      Alert.alert('Timezone Updated', '', [{ text: 'OK' }]);
     } catch (error) {
       console.log(error);
     }
@@ -82,6 +92,20 @@ export const UpdateUserIDConfig = () => {
               ]}
             >
               Clear UserID
+            </Text>
+          </View>
+        </TouchableWithoutFeedback>
+        <TouchableWithoutFeedback onPress={handleTimezone}>
+          <View style={Common.button.rounded}>
+            <Text
+              style={[
+                Fonts.textSmall,
+                Fonts.textCenter,
+                Fonts.textWhite,
+                Fonts.textBold,
+              ]}
+            >
+              Sync timezone
             </Text>
           </View>
         </TouchableWithoutFeedback>

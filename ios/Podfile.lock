@@ -377,15 +377,13 @@ PODS:
   - React-jsinspector (0.72.1)
   - React-logger (0.72.1):
     - glog
-  - react-native-flipper (0.202.0):
-    - React-Core
   - react-native-mmkv (2.10.2):
     - MMKV (>= 1.2.13)
     - React-Core
-  - react-native-rook-sdk-apple-health (0.1.1):
+  - react-native-rook-sdk-apple-health (0.1.2):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
-    - RookSDK (= 1.0.4)
+    - RookSDK (= 1.0.7)
   - react-native-safe-area-context (4.7.2):
     - React-Core
   - React-NativeModulesApple (0.72.1):
@@ -534,11 +532,11 @@ PODS:
   - RNScreens (3.25.0):
     - React-Core
     - React-RCTImage
-  - RookAppleHealth (1.0.11)
-  - RookConnectTransmission (1.0.10)
-  - RookSDK (1.0.4):
-    - RookAppleHealth (= 1.0.11)
-    - RookConnectTransmission (= 1.0.10)
+  - RookAppleHealth (1.0.14)
+  - RookConnectTransmission (1.0.11)
+  - RookSDK (1.0.7):
+    - RookAppleHealth (= 1.0.14)
+    - RookConnectTransmission (= 1.0.11)
     - RookUsersSDK (= 1.0.0)
   - RookUsersSDK (1.0.0)
   - SocketRocket (0.6.1)
@@ -592,7 +590,6 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
-  - react-native-flipper (from `../node_modules/react-native-flipper`)
   - react-native-mmkv (from `../node_modules/react-native-mmkv`)
   - react-native-rook-sdk-apple-health (from `../node_modules/react-native-rook-sdk-apple-health`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
@@ -686,8 +683,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
-  react-native-flipper:
-    :path: "../node_modules/react-native-flipper"
   react-native-mmkv:
     :path: "../node_modules/react-native-mmkv"
   react-native-rook-sdk-apple-health:
@@ -775,9 +770,8 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 184eae1ecdedc7a083194bd9ff809c93f08fd34c
   React-jsinspector: d0b5bfd1085599265f4212034321e829bdf83cc0
   React-logger: b8103c9b04e707b50cdd2b1aeb382483900cbb37
-  react-native-flipper: 54df9001d6236e4048d941043b41a9ef47f85981
   react-native-mmkv: 9ae7ca3977e8ef48dbf7f066974eb844c20b5fd7
-  react-native-rook-sdk-apple-health: fa04e7c165689b81dac1a597c17f99fff9377fe0
+  react-native-rook-sdk-apple-health: b98b2b70afb1493016c434e3d2f14a704601cf50
   react-native-safe-area-context: 7aa8e6d9d0f3100a820efb1a98af68aa747f9284
   React-NativeModulesApple: 4f31a812364443cee6ef768d256c594ad3b20f53
   React-perflogger: 3d501f34c8d4b10cb75f348e43591765788525ad
@@ -800,9 +794,9 @@ SPEC CHECKSUMS:
   RNGestureHandler: 38aa38413896620338948fbb5c90579a7b1c3fde
   RNReanimated: 2491645f0883526f4470d8b5c761308709ba31f8
   RNScreens: 85d3880b52d34db7b8eeebe2f1a0e807c05e69fa
-  RookAppleHealth: 3d7b33ce65050cd5a3dc3a3d4ba73cf8fd38722f
-  RookConnectTransmission: 4832c6ac19358ef031533fb54aabbea8dfdaf46b
-  RookSDK: 09e7ee26b54748c90774bceebab3aedb326c4169
+  RookAppleHealth: f0897ec6cc658defa8d7e27c2d63ce5cabcce54b
+  RookConnectTransmission: 83fcf9e3489b06f27a2085d33a5e932ab9709152
+  RookSDK: 0ad68fa6f0f315e6e0e509c70b2b2d744a032ee1
   RookUsersSDK: f37085568ecd9e394a78403019fa2d399c257908
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 65286bb6a07edce5e4fe8c90774da977ae8fc009

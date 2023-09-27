@@ -7,7 +7,6 @@ import {
 } from '@react-navigation/native';
 import { useTheme } from '../hooks';
 import MainNavigator from './Main';
-import { useFlipper } from '@react-navigation/devtools';
 import { ApplicationStackParamList } from '../../@types/navigation';
 import { RookSyncGate } from 'react-native-rook-sdk-apple-health';
 
@@ -19,8 +18,6 @@ const ApplicationNavigator = () => {
   const { colors } = NavigationTheme;
 
   const navigationRef = useNavigationContainerRef();
-
-  useFlipper(navigationRef);
 
   return (
     <RookSyncGate

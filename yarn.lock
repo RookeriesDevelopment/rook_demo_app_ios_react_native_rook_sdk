@@ -6302,11 +6302,6 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-native-flipper@^0.202.0:
-  version "0.202.0"
-  resolved "https://registry.yarnpkg.com/react-native-flipper/-/react-native-flipper-0.202.0.tgz#4ae0dc6f3a050c8b15d9d039f0a2bffd08c80bd3"
-  integrity sha512-LlUmY6CvEBquWl6UmcEjXCOrVAdozGts6JBKGoGiKNk8Vl+tE9L5OkceDxDJjU9aeId071xifOO7B0eBTDH4gQ==
-
 react-native-gesture-handler@^2.12.0:
   version "2.13.1"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.13.1.tgz#bad89caacd62c4560b9953b02f85f37ee42d5d4c"
@@ -6333,10 +6328,10 @@ react-native-reanimated@^3.3.0:
     convert-source-map "^2.0.0"
     invariant "^2.2.4"
 
-react-native-rook-sdk-apple-health@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/react-native-rook-sdk-apple-health/-/react-native-rook-sdk-apple-health-0.1.1.tgz#c9626124eef60a525a18375b5a57c3883d40c8c1"
-  integrity sha512-yY8sl9vAZkahdNJGHs1FTs6RlcUjzHtocrWW0xbcSF7udkNiYQpdAn2zQYM9gpJhEl4Qum75FuRHznRLNq2SUA==
+react-native-rook-sdk-apple-health@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-rook-sdk-apple-health/-/react-native-rook-sdk-apple-health-0.1.2.tgz#ba73d19604ba6ff151d3446ecfe45edb4b127cd8"
+  integrity sha512-WGkzrBkI+62V8b8XTbAZxNY14+VKrIlhDoBVa/ZX0Zj4R2gZUrFRgiMd7xhVLGNp7vQsf1iBMyoKHGQjKxH+Vg==
 
 react-native-safe-area-context@^4.6.3:
   version "4.7.2"
