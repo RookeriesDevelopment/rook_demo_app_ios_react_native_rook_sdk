@@ -9,6 +9,7 @@ import { useTheme } from '../hooks';
 import MainNavigator from './Main';
 import { ApplicationStackParamList } from '../../@types/navigation';
 import { RookSyncGate } from 'react-native-rook-sdk-apple-health';
+import { credentials } from '@/utils/config';
 
 const Stack = createStackNavigator<ApplicationStackParamList>();
 
@@ -22,8 +23,8 @@ const ApplicationNavigator = () => {
   return (
     <RookSyncGate
       environment="sandbox"
-      clientUUID="9593d0ec-47c1-4477-a8ce-10d3f4f43127"
-      password="YR9GoQ3mP0zey5nZ9w3WHQMvtvFvMdnefblx"
+      clientUUID={credentials.uuid}
+      password={credentials.password}
     >
       <SafeAreaView style={[Layout.fill, { backgroundColor: colors.card }]}>
         <NavigationContainer theme={NavigationTheme} ref={navigationRef}>

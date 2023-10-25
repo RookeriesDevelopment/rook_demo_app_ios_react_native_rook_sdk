@@ -380,10 +380,10 @@ PODS:
   - react-native-mmkv (2.10.2):
     - MMKV (>= 1.2.13)
     - React-Core
-  - react-native-rook-sdk-apple-health (0.2.0):
+  - react-native-rook-sdk-apple-health (0.2.3):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
-    - RookSDK (= 1.0.10)
+    - RookSDK (= 1.0.11)
   - react-native-safe-area-context (4.7.2):
     - React-Core
   - React-NativeModulesApple (0.72.1):
@@ -532,13 +532,13 @@ PODS:
   - RNScreens (3.25.0):
     - React-Core
     - React-RCTImage
-  - RookAppleHealth (1.0.17)
-  - RookConnectTransmission (1.0.14)
-  - RookSDK (1.0.10):
-    - RookAppleHealth (= 1.0.17)
-    - RookConnectTransmission (= 1.0.14)
-    - RookUsersSDK (= 1.0.1)
-  - RookUsersSDK (1.0.1)
+  - RookAppleHealth (1.0.18)
+  - RookConnectTransmission (1.0.15)
+  - RookSDK (1.0.11):
+    - RookAppleHealth (= 1.0.18)
+    - RookConnectTransmission (= 1.0.15)
+    - RookUsersSDK (= 1.0.2)
+  - RookUsersSDK (1.0.2)
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -771,7 +771,7 @@ SPEC CHECKSUMS:
   React-jsinspector: d0b5bfd1085599265f4212034321e829bdf83cc0
   React-logger: b8103c9b04e707b50cdd2b1aeb382483900cbb37
   react-native-mmkv: 9ae7ca3977e8ef48dbf7f066974eb844c20b5fd7
-  react-native-rook-sdk-apple-health: f2497587fb099a9c4379ad9f755999892d137467
+  react-native-rook-sdk-apple-health: bed6c10c4043c3eeba4b558c253c1a1adbfe6a41
   react-native-safe-area-context: 7aa8e6d9d0f3100a820efb1a98af68aa747f9284
   React-NativeModulesApple: 4f31a812364443cee6ef768d256c594ad3b20f53
   React-perflogger: 3d501f34c8d4b10cb75f348e43591765788525ad
@@ -794,14 +794,14 @@ SPEC CHECKSUMS:
   RNGestureHandler: 38aa38413896620338948fbb5c90579a7b1c3fde
   RNReanimated: 2491645f0883526f4470d8b5c761308709ba31f8
   RNScreens: 85d3880b52d34db7b8eeebe2f1a0e807c05e69fa
-  RookAppleHealth: c6469540c81622930d8b98e4bee02492bf6daa00
-  RookConnectTransmission: 0e7fc7e362455835b968f299614195e3e6be539e
-  RookSDK: effe909c3bc3b63cc62b40d62c87f45b6058f6cb
-  RookUsersSDK: 3a2c21297d7189be0c2eef01209aaf151bb0ae4c
+  RookAppleHealth: 4ec4427e2d703b039e2af6e0addd8bb92db36ca4
+  RookConnectTransmission: 6f195101db4e49589b0eb754d19df352163268d0
+  RookSDK: 16ef1a604df114ac418812a53ed98ccbb4452138
+  RookUsersSDK: 5344a890add61cb7a959139e5f03516d58369b7a
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 65286bb6a07edce5e4fe8c90774da977ae8fc009
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
 PODFILE CHECKSUM: d8df7d239f8854616b0465559e75b17b9403584b
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.12.1
