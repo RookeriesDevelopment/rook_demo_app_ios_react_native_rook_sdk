@@ -6390,10 +6390,10 @@ react-native-rook-logger-react-native@^0.2.10:
     axios "^1.5.1"
     xstate "^4.38.2"
 
-react-native-rook-sdk-apple-health@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/react-native-rook-sdk-apple-health/-/react-native-rook-sdk-apple-health-0.2.3.tgz#9104213fd84e8a54770d3910585a8387df0fa689"
-  integrity sha512-NBV+vWOweD5qyTe1p8nNLmIsv1+cNVgRSVjy0cmH8KVErTewh0HZ1/zAcBQu6g80ZeIzLd3B4s6KXGLRV6ihWg==
+react-native-rook-sdk-apple-health@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-rook-sdk-apple-health/-/react-native-rook-sdk-apple-health-0.6.0.tgz#692882e0a376cdaf6b10c32974b7dad7e74ca4af"
+  integrity sha512-UhNZRVP06ypZR3PL8pKJuI3jYiVHE5kGE02z3TQi0RX2lLs+dAC305OuvxYKhXXOJVdW0EKpyK/SFWfmdfqrBQ==
   dependencies:
     react-native-rook-logger-react-native "^0.2.10"
 
