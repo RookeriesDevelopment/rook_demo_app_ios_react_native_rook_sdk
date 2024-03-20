@@ -6,6 +6,7 @@ import {
   PermissionsScreen,
   SyncSummariesScreen,
 } from '@/screens';
+import { ConfigurationScreen } from '@/screens/ConfigurationScreen';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ const MainNavigator = () => {
       <Stack.Screen name="Permissions" component={PermissionsScreen} />
       <Stack.Screen name="Summaries" component={SyncSummariesScreen} />
       <Stack.Screen name="Events" component={EventsScreen} />
+      <Stack.Screen name="Configuration" component={ConfigurationScreen} />
     </Stack.Navigator>
   );
 };

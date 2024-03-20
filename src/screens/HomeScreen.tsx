@@ -59,6 +59,21 @@ export const HomeScreen = () => {
           </Text>
         </Link>
       </View>
+
+      <View style={Common.button.rounded}>
+        <Link to={{ screen: 'Configuration' }}>
+          <Text
+            style={[
+              Fonts.textSmall,
+              Fonts.textCenter,
+              Fonts.textWhite,
+              Fonts.textBold,
+            ]}
+          >
+            Configuration
+          </Text>
+        </Link>
+      </View>
     </View>
   );
 };
