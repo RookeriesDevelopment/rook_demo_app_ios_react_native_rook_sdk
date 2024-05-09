@@ -7,6 +7,7 @@ import {
   SyncSummariesScreen,
 } from '@/screens';
 import { ConfigurationScreen } from '@/screens/ConfigurationScreen';
+import { DataSourcesScreen } from '@/screens/DataSourcesScreen';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,7 @@ const MainNavigator = () => {
       <Stack.Screen name="Summaries" component={SyncSummariesScreen} />
       <Stack.Screen name="Events" component={EventsScreen} />
       <Stack.Screen name="Configuration" component={ConfigurationScreen} />
+      <Stack.Screen name="DataSources" component={DataSourcesScreen} />
     </Stack.Navigator>
   );
 };

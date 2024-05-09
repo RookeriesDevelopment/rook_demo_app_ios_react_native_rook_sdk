@@ -10,16 +10,28 @@ export const SyncSummariesScreen = () => {
   const [data, setData] = useState('');
 
   const {
+    syncSummaries,
     syncSleepSummary,
     syncBodySummary,
     syncPhysicalSummary,
-    syncPendingSummaries,
+    reSyncFailedSummaries,
   } = useRookSummaries();
 
   const { Common, Fonts, Gutters } = useTheme();
 
+  const handleSync = async (): Promise<void> => {
+    try {
+      setData(' loading . . . ');
+      const result = await syncSummaries();
+      setData(`${result}`);
+    } catch (error) {
+      setData(`${error}`);
+    }
+  };
+
   const handleSyncSleep = async (): Promise<void> => {
     try {
+      setData(' loading . . . ');
       const result = await syncSleepSummary(date);
       setData(`${result}`);
     } catch (error) {
@@ -47,10 +59,10 @@ export const SyncSummariesScreen = () => {
     }
   };
 
-  const handleSync = async (): Promise<void> => {
+  const handleSyncFailed = async (): Promise<void> => {
     try {
       setData('Loading . . .');
-      const result = await syncPendingSummaries();
+      const result = await reSyncFailedSummaries();
       setData(`${result}`);
     } catch (error) {
       setData(`${error}`);
@@ -67,6 +79,14 @@ export const SyncSummariesScreen = () => {
           onChangeText={setDate}
         />
       </View>
+
+      <TouchableWithoutFeedback onPress={handleSync}>
+        <View style={Common.button.rounded}>
+          <Text style={[Fonts.textSmall, Fonts.textCenter, Fonts.textWhite]}>
+            Sync Summaries
+          </Text>
+        </View>
+      </TouchableWithoutFeedback>
 
       <TouchableWithoutFeedback onPress={handleSyncSleep}>
         <View style={Common.button.rounded}>
@@ -91,7 +111,7 @@ export const SyncSummariesScreen = () => {
           </Text>
         </View>
       </TouchableWithoutFeedback>
-      <TouchableWithoutFeedback onPress={handleSync}>
+      <TouchableWithoutFeedback onPress={handleSyncFailed}>
         <View style={Common.button.rounded}>
           <Text style={[Fonts.textSmall, Fonts.textCenter, Fonts.textWhite]}>
             Sync Pending Summaries
