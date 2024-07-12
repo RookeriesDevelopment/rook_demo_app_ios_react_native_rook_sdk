@@ -25,6 +25,8 @@ const ApplicationNavigator = () => {
       environment="sandbox"
       clientUUID={credentials.uuid}
       password={credentials.password}
+      enableBackgroundSync
+      enableLogs
     >
       <SafeAreaView style={[Layout.fill, { backgroundColor: colors.card }]}>
         <NavigationContainer theme={NavigationTheme} ref={navigationRef}>

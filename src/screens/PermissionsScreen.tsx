@@ -2,10 +2,12 @@ import React from 'react';
 import { useTheme } from '@/hooks';
 import { Text, TouchableWithoutFeedback, View } from 'react-native';
 import { useRookPermissions } from 'react-native-rook-sdk-apple-health';
+import { useRookBackGround } from 'react-native-rook-sdk-apple-health';
 
 export const PermissionsScreen = () => {
   const { Common, Fonts } = useTheme();
-
+  const { enableBackgroundForEvents, enableBackgroundForSummaries } =
+    useRookBackGround();
   const {
     ready,
     requestAllPermissions,
@@ -14,10 +16,22 @@ export const PermissionsScreen = () => {
     requestBodyPermissions,
   } = useRookPermissions();
 
+  const enableBackgroundSync = async (): Promise<void> => {
+    try {
+      await enableBackgroundForEvents();
+      await enableBackgroundForSummaries();
+      console.log('enabled');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleRequestAllPermissions = async (): Promise<void> => {
     try {
       const result = await requestAllPermissions();
       console.log(result);
+
+      await enableBackgroundSync();
     } catch (error) {
       console.log(error);
     }
