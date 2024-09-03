@@ -12,23 +12,12 @@ export const EventsScreen = () => {
 
   const {
     ready,
-    syncEvents,
     syncBodyHeartRateEvent,
     syncPhysicalHeartRateEvent,
     syncBodyOxygenationEvent,
     syncPhysicalOxygenationEvent,
     syncTrainingEvent,
   } = useRookEvents();
-
-  const handleSyncEvents = async (): Promise<void> => {
-    try {
-      setData('Loading . . .');
-      const result = await syncEvents();
-      setData(`Result: ${result}`);
-    } catch (error) {
-      setData(`${error}`);
-    }
-  };
 
   const handleSyncBodyHeartRateEvents = async (): Promise<void> => {
     try {
@@ -90,14 +79,6 @@ export const EventsScreen = () => {
           onChangeText={setDate}
         />
       </View>
-
-      <TouchableWithoutFeedback onPress={handleSyncEvents}>
-        <View style={Common.button.rounded}>
-          <Text style={[Fonts.textTiny, Fonts.textWhite, Fonts.textCenter]}>
-            Sync Events
-          </Text>
-        </View>
-      </TouchableWithoutFeedback>
 
       <TouchableWithoutFeedback onPress={handleSyncBodyHeartRateEvents}>
         <View style={Common.button.rounded}>

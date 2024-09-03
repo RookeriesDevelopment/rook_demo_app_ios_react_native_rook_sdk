@@ -10,7 +10,6 @@ export const SyncSummariesScreen = () => {
   const [data, setData] = useState('');
 
   const {
-    syncSummaries,
     syncSleepSummary,
     syncBodySummary,
     syncPhysicalSummary,
@@ -18,16 +17,6 @@ export const SyncSummariesScreen = () => {
   } = useRookSummaries();
 
   const { Common, Fonts, Gutters } = useTheme();
-
-  const handleSync = async (): Promise<void> => {
-    try {
-      setData(' loading . . . ');
-      const result = await syncSummaries();
-      setData(`${result}`);
-    } catch (error) {
-      setData(`${error}`);
-    }
-  };
 
   const handleSyncSleep = async (): Promise<void> => {
     try {
@@ -59,6 +48,9 @@ export const SyncSummariesScreen = () => {
     }
   };
 
+  // This function will upload the summaries that couldn't be uploaded because of network errors
+  // or another issue, if there isn't failed summaries the function will throw an error
+  // indicating that anything needs to be uploaded
   const handleSyncFailed = async (): Promise<void> => {
     try {
       setData('Loading . . .');
@@ -79,14 +71,6 @@ export const SyncSummariesScreen = () => {
           onChangeText={setDate}
         />
       </View>
-
-      <TouchableWithoutFeedback onPress={handleSync}>
-        <View style={Common.button.rounded}>
-          <Text style={[Fonts.textSmall, Fonts.textCenter, Fonts.textWhite]}>
-            Sync Summaries
-          </Text>
-        </View>
-      </TouchableWithoutFeedback>
 
       <TouchableWithoutFeedback onPress={handleSyncSleep}>
         <View style={Common.button.rounded}>
@@ -114,7 +98,7 @@ export const SyncSummariesScreen = () => {
       <TouchableWithoutFeedback onPress={handleSyncFailed}>
         <View style={Common.button.rounded}>
           <Text style={[Fonts.textSmall, Fonts.textCenter, Fonts.textWhite]}>
-            Sync Pending Summaries
+            Sync Failed Summaries
           </Text>
         </View>
       </TouchableWithoutFeedback>

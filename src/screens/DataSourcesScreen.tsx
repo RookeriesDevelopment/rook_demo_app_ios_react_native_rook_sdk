@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme } from '@/hooks';
-import { Text, TouchableWithoutFeedback, View } from 'react-native';
+import { Alert, Text, TouchableWithoutFeedback, View } from 'react-native';
 import { useRookDataSources } from 'react-native-rook-sdk-apple-health';
 
 export const DataSourcesScreen = () => {
@@ -13,6 +13,9 @@ export const DataSourcesScreen = () => {
     try {
       console.log('loading . . .');
       const r = await getAvailableDataSources();
+      Alert.alert('Notice', 'The response was printed in the console', [
+        { text: 'OK', onPress: () => {} },
+      ]);
       console.log(r);
     } catch (error) {
       console.log(error);
