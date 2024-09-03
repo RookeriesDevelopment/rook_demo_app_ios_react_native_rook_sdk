@@ -12,7 +12,9 @@ export const DataSourcesScreen = () => {
   const handleSources = async () => {
     try {
       console.log('loading . . .');
-      const r = await getAvailableDataSources();
+      const r = await getAvailableDataSources({
+        redirectURL: 'https://example.com',
+      });
       Alert.alert('Notice', 'The response was printed in the console', [
         { text: 'OK', onPress: () => {} },
       ]);
@@ -25,7 +27,9 @@ export const DataSourcesScreen = () => {
   const handlePresent = async () => {
     try {
       console.log('loading . . .');
-      const r = await presentDataSourceView();
+      const r = await presentDataSourceView({
+        redirectURL: 'https://example.com',
+      });
       console.log(r);
     } catch (error) {
       console.log(error);
