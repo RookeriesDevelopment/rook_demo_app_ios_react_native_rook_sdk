@@ -25,7 +25,8 @@ export const EventsScreen = () => {
       const result = await syncBodyHeartRateEvent(date);
       setData(`Result: ${result}`);
     } catch (error) {
-      setData(`${error}`);
+      const err = error as any;
+      setData(`${err.code} - ${err.message}`);
     }
   };
 
@@ -35,7 +36,8 @@ export const EventsScreen = () => {
       const result = await syncPhysicalHeartRateEvent(date);
       setData(`Result: ${result}`);
     } catch (error) {
-      setData(`${error}`);
+      const err = error as any;
+      setData(`${err.code} - ${err.message}`);
     }
   };
 
@@ -45,7 +47,8 @@ export const EventsScreen = () => {
       const result = await syncPhysicalOxygenationEvent(date);
       setData(`Result: ${result}`);
     } catch (error) {
-      setData(`${error}`);
+      const err = error as any;
+      setData(`${err.code} - ${err.message}`);
     }
   };
 
@@ -55,7 +58,8 @@ export const EventsScreen = () => {
       const result = await syncBodyOxygenationEvent(date);
       setData(`Result: ${result}`);
     } catch (error) {
-      setData(`${error}`);
+      const err = error as any;
+      setData(`${err.code} - ${err.message}`);
     }
   };
 
@@ -65,7 +69,8 @@ export const EventsScreen = () => {
       const result = await syncTrainingEvent(date);
       setData(`Result: ${result}`);
     } catch (error) {
-      setData(`${error}`);
+      const err = error as any;
+      setData(`${err.code} - ${err.message}`);
     }
   };
 

@@ -20,7 +20,8 @@ export const ConfigurationScreen = () => {
       await updateUserID(userId);
       Alert.alert('Success', 'User updated', [{ text: 'OK' }]);
     } catch (error) {
-      console.log(error);
+      const err = error as any;
+      console.log(err.code, err.message);
     }
   };
 
@@ -29,7 +30,8 @@ export const ConfigurationScreen = () => {
       const result = await getUserID();
       setUserId(result);
     } catch (error) {
-      console.log(error);
+      const err = error as any;
+      console.log(err.code, err.message);
     }
   };
 
@@ -38,7 +40,8 @@ export const ConfigurationScreen = () => {
       await clearUserID();
       Alert.alert('Success', 'User Cleared', [{ text: 'OK' }]);
     } catch (error) {
-      console.log(error);
+      const err = error as any;
+      console.log(err.code, err.message);
     }
   };
 
@@ -47,7 +50,8 @@ export const ConfigurationScreen = () => {
       await syncUserTimezone();
       Alert.alert('Success', 'timezone synced', [{ text: 'OK' }]);
     } catch (error) {
-      console.log(error);
+      const err = error as any;
+      console.log(err.code, err.message);
     }
   };
 
@@ -56,7 +60,8 @@ export const ConfigurationScreen = () => {
       await enableSyncYesterday();
       Alert.alert('Success', 'Sync Yesterday enabled', [{ text: 'OK' }]);
     } catch (error) {
-      console.log(error);
+      const err = error as any;
+      console.log(err.code, err.message);
     }
   };
 
@@ -65,7 +70,8 @@ export const ConfigurationScreen = () => {
       await disableSyncYesterday();
       Alert.alert('Success', 'Sync Yesterday disabled', [{ text: 'OK' }]);
     } catch (error) {
-      console.log(error);
+      const err = error as any;
+      console.log(err.code, err.message);
     }
   };
 

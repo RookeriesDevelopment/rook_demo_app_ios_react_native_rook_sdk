@@ -22,7 +22,8 @@ export const PermissionsScreen = () => {
       await enableBackgroundForSummaries();
       console.log('enabled');
     } catch (error) {
-      console.log(error);
+      const err = error as any;
+      console.log(err.code, err.message);
     }
   };
 
@@ -33,7 +34,8 @@ export const PermissionsScreen = () => {
 
       await enableBackgroundSync();
     } catch (error) {
-      console.log(error);
+      const err = error as any;
+      console.log(err.code, err.message);
     }
   };
 
@@ -42,7 +44,8 @@ export const PermissionsScreen = () => {
       const result = await requestSleepPermissions();
       console.log(result);
     } catch (error) {
-      console.log(error);
+      const err = error as any;
+      console.log(err.code, err.message);
     }
   };
 
@@ -51,7 +54,8 @@ export const PermissionsScreen = () => {
       const result = await requestPhysicalPermissions();
       console.log(result);
     } catch (error) {
-      console.log(error);
+      const err = error as any;
+      console.log(err.code, err.message);
     }
   };
 
@@ -60,7 +64,8 @@ export const PermissionsScreen = () => {
       const result = await requestBodyPermissions();
       console.log(result);
     } catch (error) {
-      console.log(error);
+      const err = error as any;
+      console.log(err.code, err.message);
     }
   };
 

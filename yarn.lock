@@ -6328,10 +6328,10 @@ react-native-reanimated@^3.3.0:
     convert-source-map "^2.0.0"
     invariant "^2.2.4"
 
-react-native-rook-sdk-apple-health@^0.12.3:
-  version "0.12.3"
-  resolved "https://registry.yarnpkg.com/react-native-rook-sdk-apple-health/-/react-native-rook-sdk-apple-health-0.12.3.tgz#f50e86d9731d1dcf2bf065d88a1d2837d2713f1b"
-  integrity sha512-Fi7/7UAVzWsyjGzVH4O3pZV4zrJ3JbEL8Cpq/H9ZrFOnCf5dX+PxblTNX7+WElGmmtJryeCBpWxFNzUlXTzS3A==
+react-native-rook-sdk-apple-health@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/react-native-rook-sdk-apple-health/-/react-native-rook-sdk-apple-health-0.13.0.tgz#7d9ffb0d73cbd3aa462c14e2e5a24fbf038ffb91"
+  integrity sha512-L+1wdh+ZHYmcG5thX5esCMCEsZC4/g0J3tShx2zs7gSoXCbWvSU73mZ9Y5grQbyyqzu1ypjdMk+NtSwx0fqQ+A==
 
 react-native-safe-area-context@^4.6.3:
   version "4.7.2"

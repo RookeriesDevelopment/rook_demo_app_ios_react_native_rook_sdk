@@ -24,7 +24,8 @@ export const SyncSummariesScreen = () => {
       const result = await syncSleepSummary(date);
       setData(`${result}`);
     } catch (error) {
-      setData(`${error}`);
+      const err = error as any;
+      setData(`${err.code} - ${err.message}`);
     }
   };
 
@@ -34,7 +35,8 @@ export const SyncSummariesScreen = () => {
       const result = await syncBodySummary(date);
       setData(`${result}`);
     } catch (error) {
-      setData(`${error}`);
+      const err = error as any;
+      setData(`${err.code} - ${err.message}`);
     }
   };
 
@@ -44,7 +46,8 @@ export const SyncSummariesScreen = () => {
       const result = await syncPhysicalSummary(date);
       setData(`${result}`);
     } catch (error) {
-      setData(`${error}`);
+      const err = error as any;
+      setData(`${err.code} - ${err.message}`);
     }
   };
 
@@ -57,7 +60,8 @@ export const SyncSummariesScreen = () => {
       const result = await reSyncFailedSummaries();
       setData(`${result}`);
     } catch (error) {
-      setData(`${error}`);
+      const err = error as any;
+      setData(`${err.code} - ${err.message}`);
     }
   };
 

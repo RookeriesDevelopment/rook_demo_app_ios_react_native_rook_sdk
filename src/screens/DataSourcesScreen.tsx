@@ -20,7 +20,8 @@ export const DataSourcesScreen = () => {
       ]);
       console.log(r);
     } catch (error) {
-      console.log(error);
+      const err = error as any;
+      console.log(err.code, err.message);
     }
   };
 
@@ -32,7 +33,8 @@ export const DataSourcesScreen = () => {
       });
       console.log(r);
     } catch (error) {
-      console.log(error);
+      const err = error as any;
+      console.log(err.code, err.message);
     }
   };
 
