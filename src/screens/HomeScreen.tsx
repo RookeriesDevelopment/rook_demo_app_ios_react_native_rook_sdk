@@ -16,7 +16,7 @@ export const HomeScreen = () => {
       </Text>
 
       <View style={Common.button.rounded}>
-        <Link to={{ screen: 'Permissions' }}>
+        <Link screen="Permissions">
           <Text
             style={[
               Fonts.textSmall,
@@ -31,7 +31,7 @@ export const HomeScreen = () => {
       </View>
 
       <View style={Common.button.rounded}>
-        <Link to={{ screen: 'Summaries' }}>
+        <Link screen="Summaries">
           <Text
             style={[
               Fonts.textSmall,
@@ -46,7 +46,7 @@ export const HomeScreen = () => {
       </View>
 
       <View style={Common.button.rounded}>
-        <Link to={{ screen: 'Events' }}>
+        <Link screen="Events">
           <Text
             style={[
               Fonts.textSmall,
@@ -61,7 +61,7 @@ export const HomeScreen = () => {
       </View>
 
       <View style={Common.button.rounded}>
-        <Link to={{ screen: 'DataSources' }}>
+        <Link screen="DataSources">
           <Text
             style={[
               Fonts.textSmall,

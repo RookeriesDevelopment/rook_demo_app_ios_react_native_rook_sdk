@@ -17,6 +17,7 @@ export const EventsScreen = () => {
     syncBodyOxygenationEvent,
     syncPhysicalOxygenationEvent,
     syncTrainingEvent,
+    syncTodayCaloriesCount,
   } = useRookEvents();
 
   const handleSyncBodyHeartRateEvents = async (): Promise<void> => {
@@ -74,6 +75,17 @@ export const EventsScreen = () => {
     }
   };
 
+  const handleSyncCaloriesEvents = async (): Promise<void> => {
+    try {
+      setData('Loading . . .');
+      const result = await syncTodayCaloriesCount();
+      setData(`Result: ${JSON.stringify(result)}`);
+    } catch (error) {
+      const err = error as any;
+      setData(`${err.code} - ${err.message}`);
+    }
+  };
+
   return ready ? (
     <View>
       <View style={Gutters.tinyHMargin}>
@@ -121,6 +133,14 @@ export const EventsScreen = () => {
         <View style={Common.button.rounded}>
           <Text style={[Fonts.textTiny, Fonts.textWhite, Fonts.textCenter]}>
             Sync training Events
+          </Text>
+        </View>
+      </TouchableWithoutFeedback>
+
+      <TouchableWithoutFeedback onPress={handleSyncCaloriesEvents}>
+        <View style={Common.button.rounded}>
+          <Text style={[Fonts.textTiny, Fonts.textWhite, Fonts.textCenter]}>
+            Sync Calories Events
           </Text>
         </View>
       </TouchableWithoutFeedback>
